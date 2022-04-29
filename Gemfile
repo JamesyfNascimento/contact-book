@@ -42,6 +42,9 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
+# This gem is a port of Perl's Data::Faker library that generates fake data.
+gem "faker"
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
