@@ -16,6 +16,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_29_014013) do
     t.string "city"
     t.integer "contact_id", null: false
     t.string "state"
+    t.string "country"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["contact_id"], name: "index_addresses_on_contact_id"

@@ -4,19 +4,26 @@ class ContactsController < ApplicationController
   # GET /contacts or /contacts.json
   def index
     @contacts = Contact.all
+    @kind_options = Kind.all 
+
   end
 
   # GET /contacts/1 or /contacts/1.json
   def show
+    @kind_options = Kind.all 
   end
 
   # GET /contacts/new
   def new
     @contact = Contact.new
+    @contact.build_address
+    
+    @kind_options = Kind.all 
   end
 
   # GET /contacts/1/edit
   def edit
+    @kind_options = Kind.all 
   end
 
   # POST /contacts or /contacts.json
@@ -65,6 +72,6 @@ class ContactsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def contact_params
-      params.require(:contact).permit(:name, :email, :kind_id, :rmk)
+      params.require(:contact).permit(:name, :email, :kind_id, :rmk, address_attributes: [:street, :city, :state])
     end
 end

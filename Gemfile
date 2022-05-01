@@ -42,8 +42,10 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
-# This gem is a port of Perl's Data::Faker library that generates fake data.
-gem "faker"
+#O Lero-lero Generator é uma ferramenta capaz de gerar frases que 'falam' muita coisa mas que não tem conteúdo algum.
+gem 'lerolero_generator'
+
+gem 'rails-i18n', '~> 7.0.0' # For 7.0.0
 
 # Use Sass to process CSS
 # gem "sassc-rails"
@@ -59,6 +61,8 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+  # This gem is a port of Perl's Data::Faker library that generates fake data.
+  gem "faker"
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"

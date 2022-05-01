@@ -31,6 +31,21 @@
     <%= form.text_area :rmk %>
   </div>
 
+  <%= form.fields_for :address do |address_fields| %>
+    <div class="field">
+      <%= form.label :street %><br>
+      <%= address_fields.text_field :street %>
+    </div>
+    <div class="field">
+      <%= form.label :city %><br>
+      <%= address_fields.text_field :city %>
+    </div>
+    <div class="field">
+      <%= form.label :state %><br>
+      <%= address_fields.select :state, options_for_states(@contact.address.state) %>
+    </div>
+  <% end %>
+
   <div>
     <%= form.submit %>
   </div>

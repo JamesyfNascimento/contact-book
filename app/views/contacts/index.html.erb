@@ -1,14 +1,11 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Contacts</h1>
+<h1><%= "#{t('messages.listing')} #{@contacts.model.model_name.human(count: @contacts.count)}" %></h1>
 
 <div id="contacts">
   <% @contacts.each do |contact| %>
     <%= render contact %>
-    <p>
-      <%= link_to "Show this contact", contact %>
-    </p>
   <% end %>
 </div>
 
-<%= link_to "New contact", new_contact_path %>
+<%= link_to t('buttons.new'), new_contact_path %>

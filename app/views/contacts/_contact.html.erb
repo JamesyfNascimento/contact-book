@@ -11,12 +11,10 @@
 
   <p>
     <strong>Kind:</strong>
-    <%= contact.kind_id %>
+    <%= contact.kind.description %>
   </p>
 
-  <p>
-    <strong>Rmk:</strong>
-    <%= contact.rmk %>
-  </p>
-
+  <p><%= link_to t('buttons.show'), contact %></p>
+  <p><%= link_to t('buttons.edit'), edit_contact_path(contact) %></p>
+  <p><%= link_to t('buttons.destroy'), contact, method: :delete, data: { confirm: t('messages.confirm') } %></p>
 </div>

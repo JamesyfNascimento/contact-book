@@ -104,6 +104,7 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+    lerolero_generator (1.0.1)
     loofah (2.17.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -158,6 +159,9 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.4.2)
       loofah (~> 2.3)
+    rails-i18n (7.0.3)
+      i18n (>= 0.7, < 2)
+      railties (>= 6.0.0, < 8)
     railties (7.0.2.4)
       actionpack (= 7.0.2.4)
       activesupport (= 7.0.2.4)
@@ -219,8 +223,10 @@ DEPENDENCIES
   faker
   importmap-rails
   jbuilder
+  lerolero_generator
   puma (~> 5.0)
   rails (~> 7.0.2, >= 7.0.2.4)
+  rails-i18n (~> 7.0.0)
   selenium-webdriver
   sprockets-rails
   sqlite3 (~> 1.4)
